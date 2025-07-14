@@ -28,5 +28,4 @@ Modello SIR base per epidemie con output numerico e grafico.
 Clona il repository:
 
 ```bash
-git clone https://github.com/FreyFlyy/XXX
-cd XXX
+git clone https://github.com/FreyFlyy/python-projects
