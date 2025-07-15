@@ -62,6 +62,6 @@ Further study is needed to assess measurement consistency across subregions.
 ---
 
 **Francesco Scolz**  
-[LinkedIn] (https://www.linkedin.com/in/francesco-scolz/) • [GitHub](https://github.com/FreyFlyy)
+[LinkedIn](https://www.linkedin.com/in/francesco-scolz/) • [GitHub](https://github.com/FreyFlyy)
 
-Kaggle Project: (https://www.kaggle.com/code/freyfly/queens-nyc-air-pollution-over-the-years-2021)
+[Kaggle Project](https://www.kaggle.com/code/freyfly/queens-nyc-air-pollution-over-the-years-2021)
