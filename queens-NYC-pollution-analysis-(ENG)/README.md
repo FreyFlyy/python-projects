@@ -1,4 +1,4 @@
-# NYC Air Pollution Analysis – Queens (2005–2021)
+# NYC Air Pollution Analysis – Queens (2008–2021)
 
 This project analyzes the **average annual air pollution** in Queens, New York, between 2005 and 2021 using public datasets and Python-based data science tools.
 
@@ -63,3 +63,5 @@ Further study is needed to assess measurement consistency across subregions.
 
 **Francesco Scolz**  
 [LinkedIn] (https://www.linkedin.com/in/francesco-scolz/) • [GitHub](https://github.com/FreyFlyy)
+
+Kaggle Project: (https://www.kaggle.com/code/freyfly/queens-nyc-air-pollution-over-the-years-2021)
