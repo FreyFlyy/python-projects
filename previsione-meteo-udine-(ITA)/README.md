@@ -1,49 +1,102 @@
-# Previsione Intensità Giornata: Modello ML Multi-Classe
+# 🌦️ Previsione Meteo – Udine (S. Osvaldo)
 
-Questo progetto utilizza modelli di Machine Learning supervisionato per prevedere l'intensità di una giornata in una delle seguenti 4 classi:
+Modello di **machine learning** per la previsione della pioggia del giorno successivo, basato su dati meteorologici reali raccolti nella zona di Udine (S. Osvaldo).
 
-- Nulla o Pochissima ⚪  
-- Leggera 🟢  
-- Media 🟠  
-- Forte 🔴  
+> ⚠️ Obiettivo: predire se **ci sarà pioggia** o **sarà una giornata limpida**, con un modello bilanciato tra accuratezza e affidabilità su entrambe le classi.
 
-Vengono impiegati due modelli:
-- **Modello base** (Logistic Regression)
-- **Modello bilanciato** (con classi riequilibrate tramite `RandomOverSampler`)
-
-## 📊 Dataset
-
-Il dataset include input giornalieri (numerici e categoriali) che descrivono il contesto della giornata (es. mm di Pioggia, Temperatura Media, Umidità Massima, Vento, ...). Le variabili categoriali vengono codificate tramite `OneHotEncoder`.
 
 ---
 
-## 🧠 Modelli e Strategia
 
-- **Classificazione multi-classe** (4 classi)
-- Utilizzo di `LogisticRegression` con e senza `resampling`
-- Calcolo di:
-  - Confidenza della previsione (`predict_proba`)
-  - Accuratezza storica per classe (estratta dalla matrice di confusione)
-- Decisione finale basata su:
-  - Concordanza tra i due modelli
-  - Accuratezza storica della classe predetta
-  - Confidenza del modello
+## 🔍 Descrizione del progetto
+
+Il modello prende in input alcune informazioni meteorologiche **del giorno attuale** e stima la probabilità di pioggia per il giorno successivo.
+
+### 📥 Input
+
+- mm di pioggia (oggi)
+- Temperature (min, med, max)
+- Umidità (max, med)
+- Pressione atmosferica
+- Irraggiamento solare (KJ/m²)
+- Vento (max, med, direzione)
+- Mese, anno, fase del mese
+
+### 📤 Output
+
+- `"Nulla o Minima"` – ≤ 0.6 mm di pioggia
+- `"Presente"` – > 0.6 mm di pioggia
+
+> La soglia di 0.6 mm è scelta come compromesso per evitare rumore e falsi positivi/negativi.
 
 ---
 
-## 📦 Funzionalità
+## 🧠 Modello usato
 
-- `final_model_predict(input_df)`:
-  - Restituisce previsione finale, confidenza e accuratezza storica
-  - Valuta entrambi i modelli
-- Supporto per salvataggio e caricamento dei modelli (`.pkl`)
-- Standardizzazione opzionale per migliorare le performance del modello
+- **RandomForestClassifier** con profondità limitata (`max_depth=2`)
+- Class weighting calibrato con `factor = 1.0327` per compensare lo sbilanciamento delle classi
+- Encoding delle variabili categoriche tramite `OneHotEncoder`
+- Imputazione valori mancanti con `SimpleImputer`
 
 ---
 
-## 📈 Metriche
+## 📈 Metriche di performance
 
-- Accuratezza totale
-- Recall per classe (accuratezza storica per ogni intensità)
-- Matrice di confusione (normalizzata)
-- Confidenza della previsione
+| Metrica        | Valore    |
+|----------------|-----------|
+| Accuracy       | ~71.4%    |
+| ROC-AUC        | ~77.3%    |
+| F1 (pioggia)   | ~60.5%    |
+| Recall (Nulla) | ~71.3%    |
+| Recall (Pioggia)| ~71.5%   |
+
+> ⚠️ Il modello **non è ottimizzato per massima accuracy**, ma per **bilanciare bene entrambi i tipi di giornate**.
+
+---
+
+## 🧪 Come usare il modello
+
+Puoi inserire i dati di una giornata in un dizionario come questo:
+
+```python
+input_to_predict = {
+    "Anno": 2025,
+    "Mese": "Ago",
+    "PosizioneMese": "Meta",
+    "DirVentoMax": "S",
+    "TempMin [°C]": 18.2,
+    "TempMed [°C]": 29.1,
+    "TempMax [°C]": 33.6,
+    "UmiditaMed [%]": 80,
+    "UmiditaMax [%]": 91,
+    "VentoMed [km/h]": 6,
+    "VentoMax [km/h]": 23,
+    "Radiazione [KJ/m2]": 11270,
+    "Pressione [Pa]": 101635,
+    "mmPioggia": 0
+}
+```
+
+E chiamare:
+
+```python
+predict_single_day(input_to_predict)
+```
+
+Otterrai una previsione + confidenza basata sulle prestazioni storiche del modello per quel livello di probabilità.
+
+
+---
+
+
+🙋‍♂️ Autore
+
+`Francesco Scolz`
+
+Studente e aspirante data scientist
+
+
+---
+
+
+> ⚠️ Questo progetto ha uno scopo principalmente educativo e di dimostrazione tecnica. Non è pensato per sostituire modelli ufficiali di previsione meteorologica, ma dimostra come si possa lavorare con dataset pubblici, scelte progettuali ragionate, e costruire modelli personalizzati e adattabili.
