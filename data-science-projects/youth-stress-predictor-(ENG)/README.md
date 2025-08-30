@@ -1,62 +1,35 @@
-🧠 Project Title – [Short Descriptive Name]
-📌 Overview
+# 🧠 Youth Stress Predictor
+This project provides a predictive pipeline to estimate the type of stress a youth may experience based on answers to a 25-question survey. It demonstrates a full Data Science workflow, from raw data to a reusable model and visualizations.
+> ⚠️ Disclaimer: This model is probabilistic and educational. It has no medical or legal validity.
 
-This project demonstrates a complete end-to-end Machine Learning workflow, from dataset exploration to model training, evaluation, and deployment.
-It is designed to be accessible for both technical and non-technical audiences, with interactive notebooks, visual slides, and a deployed demo.
+## 📂 Repository Structure
 
-📂 Repository Structure
+youth-stress-predictor.ipynb → Full Jupyter Notebook with data analysis, preprocessing, training and evaluation
 
-notebook.ipynb → Full Jupyter Notebook with data analysis, preprocessing, training and evaluation
+report.pdf → Presentation slides (summary, visuals, and key insights for a broad audience)
 
-slides.pdf → Presentation slides (summary, visuals, and key insights for a broad audience)
+model_tested.xlsx → Comparison of trained models (metrics, strengths/weaknesses)
 
-dataset.csv → Dataset used for training/testing
+Deployment → Hosted on [HuggingFace Spaces](https://huggingface.co/spaces/freyflyy/youth-stress-predictor)
 
-model_test.xlsx → Comparison of trained models (metrics, strengths/weaknesses)
+## 🚀 Features
 
-Deployment → Hosted on HuggingFace Spaces
- for public use
+- Data cleaning and preprocessing
 
-🚀 Features
+- Feature engineering and visualization
 
-Data cleaning and preprocessing
+- Multiple model training (decision trees, gradient boosting, etc.)
 
-Feature engineering and visualization
+- Model comparison with quantitative metrics (Accuracy, F1, etc.)
 
-Multiple model training (decision trees, gradient boosting, etc.)
+- Deployed interactive demo on HuggingFace
 
-Model comparison with quantitative metrics (Accuracy, F1, etc.)
+## 📊 Evaluation
 
-Deployed interactive demo on HuggingFace
+We used Macro F1-score as valuation metric, thanks to its balanced view across all categories
 
-📊 Evaluation
+📑 A detailed comparison is available in *model_test.xlsx*
 
-We used several metrics to evaluate model performance across classes:
-
-Accuracy (per class + overall)
-
-Macro F1-score (balanced view across categories)
-
-Confusion Matrix
-
-📑 A detailed comparison is available in model_test.xlsx.
-
-🌍 Deployment
-
-The best-performing model is deployed on HuggingFace Spaces:
-👉 Try the Demo Here
-
-🛠️ Installation & Usage
-
-Clone the repository and open the notebook:
-
-git clone https://github.com/YourUsername/YourRepo.git
-cd YourRepo
-jupyter notebook notebook.ipynb
-
-
-Or explore directly on HuggingFace.
-
-📖 License
+## 📖 License
 
 This project is released under the MIT License.
