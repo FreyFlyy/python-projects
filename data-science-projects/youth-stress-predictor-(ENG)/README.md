@@ -28,7 +28,7 @@ Deployment → Hosted on [HuggingFace Spaces](https://huggingface.co/spaces/frey
 
 We used Macro F1-score as valuation metric, thanks to its balanced view across all categories
 
-📑 A detailed comparison is available in *model_test.xlsx*
+📑 A detailed comparison is available in *models_tested.xlsx*
 
 ## 📖 License
 
