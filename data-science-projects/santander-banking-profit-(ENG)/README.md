@@ -18,10 +18,13 @@ $\text{Profit} = \text{30€} \times \text{TP} - \text{5€} \times \text{FP}$
 
 ## 📁 Repository Structure
 
-* `notebook.ipynb` -- the main notebook in which you'll find all of the work behind the project
-* `executive_report.pdf` -- a short bullet report which presents the project and its business value (for more depth consult `notebook.ipynb`)
-* `requirements.txt` -- library requirements for the notebook to work correctly
-* `README.md` (this file) -- quick presentation to the project
+- `notebook.ipynb` — main notebook detailing the full analysis and modeling process  
+- `executive_report.pdf` — concise summary of project and business insights  
+- `requirements.txt` — Python dependencies for reproducing the workflow  
+- `models/` — contains:
+  - `model.pth` — final trained model parameters (`state_dict()`)  
+  - `scaler.pkl` — fitted StandardScaler for preprocessing  
+- `README.md` — this file
 
 ---
 
