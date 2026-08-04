@@ -7,7 +7,6 @@ The projects are focused on data analysis, predictive modeling, and decision-mak
 *   **[Santander Banking Profit](https://github.com/FreyFlyy/python-projects/tree/main/data-science-projects/santander-banking-profit-(ENG)):** An end-to-end ML pipeline for bank transaction prediction, aimed at optimizing business KPIs, with an estimated theoretical profit exceeding €90M/year.
 *   **[Bitcoin Price Predictor](https://github.com/FreyFlyy/python-projects/tree/main/data-science-projects/bitcoin-price-predictor-(ENG)):** A study on the daily price variation of Bitcoin (BTC-USD) using technical indicators (RSI, STD) and Neural Networks (MLP) built with **PyTorch**.
 *   **[Udine Precipitation Predictor](https://github.com/FreyFlyy/python-projects/tree/main/data-science-projects/previsione-meteo-udine-(ITA)):** A model based on **RandomForestClassifier** to predict rain in Udine (S. Osvaldo) with a measured accuracy of 71.35%.
-*   **[Queens NYC Pollution Analysis](https://github.com/FreyFlyy/python-projects/tree/main/data-science-projects/queens-NYC-pollution-analysis-(ENG)):** A statistical analysis (linear regression) of air quality evolution in New York from 2005 to 2021.
 *   **[Youth Stress Predictor](https://github.com/FreyFlyy/python-projects/tree/main/data-science-projects/youth-stress-predictor-(ENG)):** A predictive pipeline to estimate the type of stress in youth via surveys; includes an interactive demo hosted on HuggingFace.
 
 *   **Languages:** Python 3.x
