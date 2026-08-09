@@ -129,21 +129,10 @@ Scaled to an assumed monthly portfolio of 2M customers, the **Primary model (`RF
 ├── data/       # Raw, cleaned, and engineered datasets (train/test splits)
 ├── models/     # GridSearches, candidate models, and final production artifacts (.joblib)
 ├── tests/      # Test outputs (noise injection, feature drop, cosine similarity, SHAP)
-└── demo/       # Self-hosted production demo, see why*
-LICENSE         # MIT license file
-README.md       # This file, general outline of the project
-requirements.txt  # Library requirements for running all notebooks
-*.ipynb         # Notebooks (01 → 04)
-```
-
-```text
-├── data/       # Raw, cleaned, and engineered datasets (train/test splits)
-├── models/     # GridSearches, candidate models, and final production artifacts (.joblib)
-├── tests/      # Test outputs (noise injection, feature drop, cosine similarity, SHAP)
 └── demo/       # Self-hosted production demo (see note below)
 LICENSE         # MIT license
 README.md       # Project overview and documentation
-requirements.txt # Pinned dependencies for reproducibility
+requirements.txt # Dependencies for reproducibility
 *.ipynb         # Notebooks (01 → 04)
 ```
 
