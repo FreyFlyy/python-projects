@@ -1,0 +1,20 @@
+# Core ML / Data
+numpy==2.4.6
+pandas==3.0.3
+scikit-learn==1.8.0
+joblib==1.5.3
+
+# SHAP explainability
+shap==0.52.0
+
+# Visualization (waterfall plot)
+matplotlib==3.10.9
+
+# PDF generation
+reportlab==4.3.0
+
+# Web app — Gradio 6.5+ è il primo con supporto pandas 3
+gradio>=6.5.0
+
+# Math utilities (logit/expit for SHAP calibration)
+scipy==1.17.1

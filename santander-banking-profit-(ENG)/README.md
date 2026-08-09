@@ -54,12 +54,6 @@ It is not intended to replicate any real Santander system, and all numbers are p
 
 ---
 
-## 📄 License
-
-MIT
-
----
-
 ## 👨‍💻 Author
 
 Francesco Scolz
@@ -67,10 +61,7 @@ Francesco Scolz
 *   [Linkedin](https://www.linkedin.com/in/francesco-scolz/)
 *   [GitHub](https://github.com/freyflyy)
 *   [Hugging Face](https://huggingface.co/freyflyy)
-*   [Kaggle](https://www.kaggle.com/freyfly)
-*   [YouTube](https://www.youtube.com/@FrascoMath)
-*   [Personal website](https://taplink.cc/scolz)
 
---
+## 📄 License
 
-*Scolz F.*
+MIT

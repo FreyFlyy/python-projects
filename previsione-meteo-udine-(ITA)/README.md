@@ -12,7 +12,7 @@ Il modello utilizzato è un **RandomForestClassifier** di tipo *ensemble*, prove
 
 Per la preparazione dei dati, sono state adottate le seguenti fasi:
 
-1.  **Importazione Dati:** Il notebook importa il file `Udine_dati_meteo.parquet` da un repository pubblico.
+1.  **Importazione Dati:** Il notebook importa il file `Udine_dati_meteo.parquet`, reperibili pubblicamente dal sito dell'ArpaFVG.
 2.  **Pulizia e Trasformazione:** I valori vuoti nelle colonne numeriche sono riempiti utilizzando il `SimpleImputer` (strategia "mean"), e le variabili categoriche sono convertite in un formato leggibile dal modello tramite `OneHotEncoding`. Non è stata applicata la standardizzazione dei dati, poiché i modelli ad albero (come il RandomForest) non ne necessitano.
 3.  **Divisione Dati:** I dati sono stati divisi in un set di training (80% del totale) e un set di test (20% del totale).
 4.  **Bilanciamento delle Classi:** Per affrontare lo sbilanciamento dei casi di training (dove i "Casi di giornata limpida" sono 2469 e i "Casi di pioggia" sono 1018), sono stati specificati pesi diversi per le classi "Nulla o Minima" e "Presente". I parametri ottimizzati (compromesso tra semplicità e interpretabilità) sono stati `max_depth = 2` e un coefficiente di riequilibrio (`factor`) pari a 1.0327.
@@ -61,9 +61,7 @@ Francesco Scolz
 *   [Linkedin](https://www.linkedin.com/in/francesco-scolz/)
 *   [GitHub](https://github.com/freyflyy)
 *   [Hugging Face](https://huggingface.co/freyflyy)
-*   [Kaggle](https://www.kaggle.com/freyfly)
-*   [YouTube](https://www.youtube.com/@FrascoMath)
-*   [Personal website](https://taplink.cc/scolz)
 
 ## ⚖️ Licenza
+
 MIT
