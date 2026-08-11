@@ -166,7 +166,15 @@ Then run notebooks `01 → 02 → 03 → 04` in order using the correct environm
 
 ### 2. Run the self-hosted demo
 
-From `./demo`:
+**IMPORTANT!**
+
+If not done already, decompress all `.gz` files by running this command in the project root directory `./`:
+
+```bash
+find . -name "*.gz" -exec gzip -dk {} +
+```
+
+Then, from `./demo`:
 
 ```bash
 pip install -r requirements.txt
