@@ -1,14 +1,13 @@
 # Credit Risk Modeling and Robustness Analysis - Taiwan UCI Credit Dataset
 
-[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-yellow)](https://huggingface.co/spaces/freyflyy/taiwan-robust-explainable-credit-lend) [![Python 3.14+](https://img.shields.io/badge/python-3.14+-007ec6.svg?logo=python&logoColor=white)](https://www.python.org/) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Demo](https://img.shields.io/badge/Demo-self--hosted-gray?logo=github&labelColor=black&color=yellow)](#demo) [![Python 3.14+](https://img.shields.io/badge/python-3.14+-007ec6.svg?logo=python&logoColor=white)](https://www.python.org/) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-> **TL;DR:**
+> **SUMMARY:**
 > An end-to-end, EU AI Act-compliant credit risk decision engine. Instead of optimizing standard statistical metrics like F1-score or ROC-AUC, this system maximizes **expected dollar-value profit** while evaluating model resilience against data corruption, missing features, and noise.
 
 *A credit default model that is evaluated on estimated dollars, not accuracy, because a bank doesn't care about accuracy, it cares about profit and revenue to keep the bank working*
 
-**Live demo:** [Hugging Face Spaces](https://huggingface.co/spaces/freyflyy/taiwan-robust-explainable-credit-lend)
-**Repo:** [GitHub repo](https://github.com/FreyFlyy/taiwan-robust-explainable-credit-lend-(ENG))
+**Live demo:** [See instructions](#demo)
 
 ---
 
@@ -162,6 +161,8 @@ pip install -r requirements.txt
 ```
 
 Then run notebooks `01 → 02 → 03 → 04` in order using the correct environment and your preferred IDE.
+
+<a id="demo"></a>
 
 ### 2. Run the self-hosted demo
 
