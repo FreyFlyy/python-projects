@@ -2,6 +2,8 @@
 
 [![Demo](https://img.shields.io/badge/Demo-self--hosted-gray?logo=github&labelColor=black&color=yellow)](#demo) [![Python 3.14+](https://img.shields.io/badge/python-3.14+-007ec6.svg?logo=python&logoColor=white)](https://www.python.org/) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
+![Live demo gif](./gifs/Live_demo.gif)
+
 > **SUMMARY:**
 > An end-to-end, EU AI Act-compliant credit risk decision engine. Instead of optimizing standard statistical metrics like F1-score or ROC-AUC, this system maximizes **expected dollar-value profit** while evaluating model resilience against data corruption, missing features, and noise.
 
@@ -15,8 +17,7 @@
 
 The dataset is the [Taiwan UCI Credit Card dataset](https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients)
 (30'000 clients, April–September 2005). The task is not "predict default" in the
-abstract, it's **decide whether to freeze a revolving credit line**, evaluated in
-monetary impact, not accuracy.
+abstract, it's **decide whether to freeze a revolving credit line**, evaluated in monetary impact, not accuracy.
 
 - **Objective**: maximize **expected economic value per customer**, not F1 score or ROC-AUC.
 - **Why it matters**: accuracy-optimized classifiers routinely make decisions that lose more money than they save, because false positives and false negatives have wildly different costs in credit risk.
@@ -85,14 +86,17 @@ Models were selected per deployment scenario, not by a single leaderboard:
 
 ## 5. Robustness testing
 
-- **Monte Carlo noise injection:** Gaussian perturbation on continuous features,
-  stochastic ±1 ordinal shift on `PAY_*`, swept σ ∈ [0, 0.50].
-- **Feature dropping:** up to 50% of features masked and median-imputed, 100 MC
-  iterations per drop level.
+- **Monte Carlo noise injection:** Gaussian perturbation on continuous features, stochastic ±1 ordinal shift on `PAY_*`, swept σ ∈ [0, 0.50].
+- **Feature dropping:** up to 50% of features masked and median-imputed, 100 MC iterations per drop level.
 - **Feature importance stability:** cosine similarity between clean and
   noise-retrained importance/coefficient vectors, Top-5 and Top-10 subspaces.
-- **SHAP:** per-customer explainability + automated PDF "adverse action" report
-  generation.
+- **SHAP:** per-customer explainability + automated PDF "adverse action" report generation.
+
+*Example of an audit report*
+
+![Audit report gif](./gifs/Audit_report_visual.gif)
+
+---
 
 ## 6. Final evaluation (bootstrap, n=10,000)
 
@@ -128,7 +132,8 @@ Scaled to an assumed monthly portfolio of 2M customers, the **Primary model (`RF
 ├── data/       # Raw, cleaned, and engineered datasets (train/test splits)
 ├── models/     # GridSearches, candidate models, and final production artifacts (.joblib)
 ├── tests/      # Test outputs (noise injection, feature drop, cosine similarity, SHAP)
-└── demo/       # Self-hosted production demo (see note below)
+├── demo/       # Self-hosted production demo (see note below)
+└── gifs/       # Example gifs for the demo (without needing to set up the environment)
 LICENSE         # MIT license
 README.md       # Project overview and documentation
 requirements.txt # Dependencies for reproducibility
